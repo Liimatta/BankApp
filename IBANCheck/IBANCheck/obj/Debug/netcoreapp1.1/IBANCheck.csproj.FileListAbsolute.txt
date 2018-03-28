@@ -1,0 +1,10 @@
+C:\Dev\BankApp\IBANCheck\IBANCheck\bin\Debug\netcoreapp1.1\IBANCheck.deps.json
+C:\Dev\BankApp\IBANCheck\IBANCheck\bin\Debug\netcoreapp1.1\IBANCheck.runtimeconfig.json
+C:\Dev\BankApp\IBANCheck\IBANCheck\bin\Debug\netcoreapp1.1\IBANCheck.runtimeconfig.dev.json
+C:\Dev\BankApp\IBANCheck\IBANCheck\bin\Debug\netcoreapp1.1\IBANCheck.dll
+C:\Dev\BankApp\IBANCheck\IBANCheck\bin\Debug\netcoreapp1.1\IBANCheck.pdb
+C:\Dev\BankApp\IBANCheck\IBANCheck\obj\Debug\netcoreapp1.1\IBANCheck.csprojResolveAssemblyReference.cache
+C:\Dev\BankApp\IBANCheck\IBANCheck\obj\Debug\netcoreapp1.1\IBANCheck.csproj.CoreCompileInputs.cache
+C:\Dev\BankApp\IBANCheck\IBANCheck\obj\Debug\netcoreapp1.1\IBANCheck.AssemblyInfo.cs
+C:\Dev\BankApp\IBANCheck\IBANCheck\obj\Debug\netcoreapp1.1\IBANCheck.dll
+C:\Dev\BankApp\IBANCheck\IBANCheck\obj\Debug\netcoreapp1.1\IBANCheck.pdb
