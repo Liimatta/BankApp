@@ -11,10 +11,9 @@ namespace IBANCheck
             string bban = "12345600000785";
             string iban = bban + "1518";
             Console.WriteLine(iban);
-            long Iban = Convert.ToInt64(iban);
-            
+            ulong Iban = Convert.ToUInt64(iban);
             int x = 0;
-            long numVal = 0;
+            Console.WriteLine(Iban);
             bool ValueNotFound = true;
             do
             {
@@ -32,16 +31,16 @@ namespace IBANCheck
                 {
                     IbanCopy += x.ToString();
                 }
-                Int64.TryParse(IbanCopy, out numVal);
-                Console.WriteLine("Lopuksi " + IbanCopy);
+                Iban = Convert.ToUInt64(IbanCopy);
+                Console.WriteLine("Lopuksi " + Iban);
                 Console.WriteLine('\n');
 
-                if (numVal % 97 == 1)
+                if (Iban % 97 == 1)
                 {
-                    iban = numVal.ToString();
+                    iban = Iban.ToString();
                     ValueNotFound = false;
                 }
-                Console.WriteLine("Modulo: " + numVal % 97);
+                Console.WriteLine("Modulo: " + Iban % 97);
                 Console.WriteLine('\n');
                 x++;
             }

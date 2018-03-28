@@ -8,9 +8,9 @@ namespace IBANCheck
         {
             IBAN IBAN = new IBAN("Iban");
 
-            //IBAN.Bbantran();
-            wtf wtf = new wtf();
-            wtf.nibba();
+            IBAN.Bbantran();
+            //wtf wtf = new wtf();
+            //wtf.nibba();
 
             Console.ReadKey();
         }
