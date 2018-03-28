@@ -8,18 +8,23 @@ namespace IBANCheck
     {
         public void nibba()
         {
-            string bban = "123456785";
+            string bban = "12345600000785";
             string iban = bban + "1518";
             Console.WriteLine(iban);
             long Iban = Convert.ToInt64(iban);
-            string IbanCopy = iban;
+            
             int x = 0;
             long numVal = 0;
+            bool ValueNotFound = true;
             do
             {
 
-                
-                if(x<10)
+                string IbanCopy = iban;
+
+                Console.WriteLine("X: " + x);
+                Console.WriteLine('\n');
+
+                if (x < 10)
                 {
                     IbanCopy += '0' + x.ToString();
                 }
@@ -27,12 +32,21 @@ namespace IBANCheck
                 {
                     IbanCopy += x.ToString();
                 }
-                x++;
-                numVal = Int64.Parse(IbanCopy);
-            }
-            while (numVal % 97 != 1);
+                Int64.TryParse(IbanCopy, out numVal);
+                Console.WriteLine("Lopuksi " + IbanCopy);
+                Console.WriteLine('\n');
 
-            iban = Iban.ToString();
+                if (numVal % 97 == 1)
+                {
+                    iban = numVal.ToString();
+                    ValueNotFound = false;
+                }
+                Console.WriteLine("Modulo: " + numVal % 97);
+                Console.WriteLine('\n');
+                x++;
+            }
+            while (ValueNotFound);
+
             Console.WriteLine(iban);
         }
     }

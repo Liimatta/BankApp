@@ -85,32 +85,53 @@ namespace IBANCheck
                 Console.WriteLine("BBAN OK");
             else
                 Console.WriteLine("Tilinumero virheellinen");
+            Console.WriteLine(bban);
+            Console.ReadKey();
 
-            string iban = bban.Insert(14, "1518");
-            int a = 0;
-            int b = 0;
+            string iban = bban + "1518";
+            Console.WriteLine(iban);
             long Iban = Convert.ToInt64(iban);
+
+            int x = 0;
+            long numVal = 0;
+            bool ValueNotFound = true;
             do
             {
-                do
-                {
-                    string A = a.ToString();
-                    string B = b.ToString();
 
-                    iban = iban.Insert(18, A);
-                    iban = iban.Insert(19, B);
-                    b++;
+                string IbanCopy = iban;
+
+                Console.WriteLine("X: " + x);
+                Console.WriteLine('\n');
+
+                if (x < 10)
+                {
+                    IbanCopy += '0' + x.ToString();
                 }
-                while (Iban % 97 != 1);
-                a++;
+                else
+                {
+                    IbanCopy += x.ToString();
+                }
+                Int64.TryParse(IbanCopy, out numVal);
+                Console.WriteLine("Lopuksi " + IbanCopy);
+                Console.WriteLine('\n');
+
+                if (numVal % 97 == 1)
+                {
+                    iban = numVal.ToString();
+                    ValueNotFound = false;
+                }
+                Console.WriteLine("Modulo: " + numVal % 97);
+                Console.WriteLine('\n');
+                x++;
             }
-            while (Iban % 97 != 1);
-            iban = Iban.ToString();
+            while (ValueNotFound);
+
             Console.WriteLine(iban);
+
 
             return bban;
 
-            }
+        }
 
         
     }
