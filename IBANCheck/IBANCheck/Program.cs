@@ -10,7 +10,7 @@ namespace IBANCheck
 
             IBAN.Bbantran();
             //wtf wtf = new wtf();
-            //wtf.nibba();
+            //wtf.tester();
 
             Console.ReadKey();
         }

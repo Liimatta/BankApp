@@ -6,7 +6,7 @@ namespace IBANCheck
 {
     class wtf
     {
-        public void nibba()
+        public void tester()
         {
             string bban = "12345600000785";
             string iban = bban + "1518";
